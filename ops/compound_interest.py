@@ -44,7 +44,7 @@ def check_compound(time_frame, baseline, baseline_daily_interest_rate, return_da
     # Day 1:
     daily_interest = baseline * baseline_daily_interest_rate
     amount = baseline + daily_interest
-    y_coins = [amount]
+    y_coins = [amount-baseline]
     for i in range(time_frame - 1):
         daily_interest = amount * baseline_daily_interest_rate / 100
         amount += daily_interest
@@ -71,13 +71,15 @@ compound_rate, compound_amount, x, y = check_compound(year * 100, 2000, baseline
 print("Compound rate = " + str(compound_rate) + " %")
 print("Interest = " + str(compound_amount) + " " + coin_type)
 
+print(x, y)
+
 run_status = True
 while run_status:
     year = input("Check your profits in x years: ")
     if year in ["Y", "y"]:
         run_status = False
     else:
-        year = float(year)
+        year = float(int(year))
         print("Gains in " + str(year) + " years: " + str(y[round(365 * year)]))
 
 

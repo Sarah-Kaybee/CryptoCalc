@@ -11,12 +11,10 @@
                 <img src="img.jpg" />
             </div>
                         <div class="col-md-6">
-                <h1 style="text-align: center;
-                   color: #000000">
+                <h1 class="black-centred-text">
                 CryptoCalc
                 </h1>
-                <h2 style="text-align: center;
-                   color: #000000">
+                <h2 class="black-centred-text">
                 Calculate Your Returns</h2>
                 <p style="text-align: center;
                   color: #000000;
@@ -29,49 +27,58 @@
 
     <!-- CALCULATOR -->
     <div class="container">
-        <!-- ROWS -->
-        <div class="row">
-            <!-- COLUMNS -->
-            <div class="col md-5 mb-3">
-                <!--Currency Search Bar-->
-                <div class="container" id="currency-dropdown">
-                    <!--Input-->
-                    <div class="dropdown nav-item"
-                         style="margin: auto;
-                                width: 45%;">
-                        <h5 style="text-align: center;">Choose currency: </h5>
-                        <!-- Dropdown coin list -->
-                        <!--Source: https://www.youtube.com/watch?v=lg1d0QaQLe0,
-                        https://www.webslesson.info/2017/04/multiple-select-option-by-using-bootstrap-select-plugin-in-php-ajax.html-->
-                        <form method="post" id="multiple_select_form">
-                            <select name="framework"
-                                    id="framework"
-                                    class="form-control selectpicker"
-                                    data-live-search="true" multiple>
-                                {% for coin in coin_list %}
-                                <option value={{forloop.counter}} data-secondary-text="% 24H">{{ coin }}</option>
-                                {% endfor %}
-                            </select>
-                            <input type="hidden" name="hidden_framework" id="hidden_framework" />
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- STAKING CALCULATOR -->
-            <div class="col md-4 mb-3">
-                {{ coin }} {{ farming_type }}
-                <input id="staking_amnt" class="form-control" placeholder="Amount staked" type="number">
-                <label for="compound">Compound Interest: </label>
-                <input id="compound" type="checkbox">
-            </div>
-
-            <!-- MINING CALCULATOR -->
-            <div class="col md-3 mb-3">
-                <label for="hashrate">Hashrate: </label>
-                <input id="hashrate" type="number">
+        <!--Currency Search Bar-->
+        <div class="container" id="currency-dropdown" style="margin-bottom: 1%;">
+            <div class="dropdown nav-item"
+                 style="margin: auto;
+                        width: 45%;">
+                <h5 style="text-align: center;">Choose currency: </h5>
+                <!-- Dropdown coin list -->
+                <!--Source: https://www.youtube.com/watch?v=lg1d0QaQLe0,
+                https://www.webslesson.info/2017/04/multiple-select-option-by-using-bootstrap-select-plugin-in-php-ajax.html-->
+                <form method="post" id="multiple_select_form">
+                    <select name="framework"
+                            id="framework"
+                            class="form-control selectpicker"
+                            data-live-search="true" multiple>
+                        {% for coin in coin_list %}
+                            <option value={{forloop.counter}} data-secondary-text="% 24H">{{ coin }}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="hidden" name="hidden_framework" id="hidden_framework" />
+                </form>
             </div>
         </div>
-        <input type="submit" name="submit" class="btn btn-info" value="Calculate" style="margin: auto; position: relative;" />
+
+        <div class="container">
+            <!-- ROW -->
+            <div class="row center">
+                <!-- STAKING CALCULATOR -->
+                <div style="border: black solid 1px;" class="col md-3 mb-3">
+                    {{ coin }} {{ farming_type }}
+                    <input id="staking_amnt" class="form-control" placeholder="Amount staked" type="number">
+                </div>
+
+                <!-- MINING CALCULATOR -->
+                <div style="border: black solid 1px; text-align: center;" class="col md-3 mb-3">
+                    <input id="hashrate" class="form-control" placeholder="Hashrate" type="number">
+                </div>
+            </div>
+            <div style="border: black solid 1px;" class="row center">
+                <div class="col md-3 mb-3" style="text-align: center;">
+                    <label for="compound">Compound Interest: </label>
+                    <input id="compound" type="checkbox">
+                </div>
+                <div style="border: black solid 1px;" class="col md-3 mb-3">
+                    <input id="time_frame" class="form-control" placeholder="Time staked in days (i.e. 365)" type="number">
+                </div>
+            </div>
+            <div class="row center">
+                <div style="border: black solid 1px; text-align: center;" class="col md-3 mb-3">
+                    <input type="submit" name="submit" class="btn btn-info" value="Calculate" style="margin: auto; position: relative;" />
+                </div>
+            </div>
+        </div>
     </div>
 
     <hr>

@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+
+    <!-- TITLE HEADER -->
+    <div class="jumbotron">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img.jpg" />
+            </div>
+                        <div class="col-md-6">
+                <h1 style="text-align: center;
+                   color: #000000">
+                CryptoCalc
+                </h1>
+                <h2 style="text-align: center;
+                   color: #000000">
+                Calculate Your Returns</h2>
+                <p style="text-align: center;
+                  color: #000000;
+                  font-size: 16px;">
+                Accurately compare crypto farming benefits with CryptoCalc.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CALCULATOR -->
+    <div class="container">
+        <!-- ROWS -->
+        <div class="row">
+            <!-- COLUMNS -->
+            <div class="col md-5 mb-3">
+                <!--Currency Search Bar-->
+                <div class="container" id="currency-dropdown">
+                    <!--Input-->
+                    <div class="dropdown nav-item"
+                         style="margin: auto;
+                                width: 45%;">
+                        <h5 style="text-align: center;">Choose currency: </h5>
+                        <!-- Dropdown coin list -->
+                        <!--Source: https://www.youtube.com/watch?v=lg1d0QaQLe0,
+                        https://www.webslesson.info/2017/04/multiple-select-option-by-using-bootstrap-select-plugin-in-php-ajax.html-->
+                        <form method="post" id="multiple_select_form">
+                            <select name="framework"
+                                    id="framework"
+                                    class="form-control selectpicker"
+                                    data-live-search="true" multiple>
+                                {% for coin in coin_list %}
+                                <option value={{forloop.counter}} data-secondary-text="% 24H">{{ coin }}</option>
+                                {% endfor %}
+                            </select>
+                            <input type="hidden" name="hidden_framework" id="hidden_framework" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- STAKING CALCULATOR -->
+            <div class="col md-4 mb-3">
+                {{ coin }} {{ farming_type }}
+                <input id="staking_amnt" class="form-control" placeholder="Amount staked" type="number">
+                <label for="compound">Compound Interest: </label>
+                <input id="compound" type="checkbox">
+            </div>
+
+            <!-- MINING CALCULATOR -->
+            <div class="col md-3 mb-3">
+                <label for="hashrate">Hashrate: </label>
+                <input id="hashrate" type="number">
+            </div>
+        </div>
+        <input type="submit" name="submit" class="btn btn-info" value="Calculate" style="margin: auto; position: relative;" />
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <!-- Grid layout -->
+        <!-- SOURCE: Bootstrap template. https://getbootstrap.com/docs/4.5/examples/album/-->
+        <h3 style="text-align: center; padding=100px;">New to crypto? Check these out:</h3>
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <!-- ROWS -->
+                <div class="row">
+                    <!-- COLUMNS -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="225"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail">
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-title" style="text-color: #000000;">
+                                    <h2 style="text-align: center;">Crypto for Beginners</h2>
+                                    What is cryptocurrency and why is it so important? Click here to learn.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                        <small class="text-muted">~15 mins</small>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="225"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail">
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-title">
+                                    <h2 style="text-align: center;">How can I farm crypto?</h2>
+                                    Educate yourself about Crypto farming methods: PoS, PoW and Lending. Start earning ASAP!
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">~15 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top"
+                            width="100%"
+                            height="225"
+                            xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid slice"
+                            focusable="false"
+                            role="img"
+                            aria-label="Placeholder: Thumbnail">
+                            </svg>
+                            <div class="card-body">
+                                <p class="card-title">
+                                    <h2 style="text-align: center;">Crypto News</h2>
+                                    Check the news. Check the news. Check the news. Check the news. Check the news.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">~15 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grid layout #2 -->
+    <h3>Latest news: </h3>
+</div>
+
+<script>
+$(document).ready(function(){
+ $('.selectpicker').selectpicker();
+
+ $('#framework').change(function(){
+  $('#hidden_framework').val($('#framework').val());
+ });
+
+ $('#multiple_select_form').on('submit', function(event){
+  event.preventDefault();
+  if($('#framework').val() != '')
+  {
+   var form_data = $(this).serialize();
+   $.ajax({
+    url:"insert.php",
+    method:"POST",
+    data:form_data,
+    success:function(data)
+    {
+     //console.log(data);
+     $('#hidden_framework').val('');
+     $('.selectpicker').selectpicker('val', '');
+     alert(data);
+    }
+   })
+  }
+  else
+  {
+   alert("Please select a coin");
+   return false;
+  }
+ });
+});
+</script>
+
+{% endblock %}

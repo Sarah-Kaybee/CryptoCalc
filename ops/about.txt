@@ -1,0 +1,7 @@
+ops:
+
+folder for back-end mathematical scripts.
+
+includes 
+- API calling (stats.py)
+- algorithms (compound_interest.py)

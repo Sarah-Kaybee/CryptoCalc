@@ -1,0 +1,13 @@
+{
+   "id":1,
+   "symbol":"BTC",
+   "name":"Bitcoin",
+   "amount":1000,
+   "last_updated":"2020-09-08T04:12:22.000Z",
+   "quote":{
+      "USD":{
+         "price":10332731.8913,
+         "last_updated":"2020-09-08T04:12:22.000Z"
+      }
+   }
+}

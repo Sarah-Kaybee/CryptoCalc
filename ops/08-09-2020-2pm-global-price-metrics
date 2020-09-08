@@ -1,0 +1,21 @@
+{
+   "active_cryptocurrencies":5074,
+   "total_cryptocurrencies":6795,
+   "active_market_pairs":28731,
+   "active_exchanges":886,
+   "total_exchanges":1126,
+   "eth_dominance":11.9286,
+   "btc_dominance":57.7747,
+   "quote":{
+      "USD":{
+         "total_market_cap":330574156768.845,
+         "total_volume_24h":144562309892.239,
+         "total_volume_24h_reported":162854881467.63,
+         "altcoin_volume_24h":111267791967.32,
+         "altcoin_volume_24h_reported":126370177181.049,
+         "altcoin_market_cap":139586096510.856,
+         "last_updated":"2020-09-08T04:12:00.000Z"
+      }
+   },
+   "last_updated":"2020-09-08T04:12:00.000Z"
+}

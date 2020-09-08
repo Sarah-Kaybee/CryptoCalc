@@ -1,0 +1,60 @@
+{
+   "DOT":{
+      "urls":{
+         "website":[
+            "https://polkadot.network/"
+         ],
+         "technical_doc":[
+
+         ],
+         "twitter":[
+            "https://twitter.com/Polkadot"
+         ],
+         "reddit":[
+            "https://reddit.com/r/dot"
+         ],
+         "message_board":[
+            "https://medium.com/polkadot-network"
+         ],
+         "announcement":[
+
+         ],
+         "chat":[
+            "https://t.me/PolkadotOfficial"
+         ],
+         "explorer":[
+            "http://polkascan.io/",
+            "https://polkadot-cc1.subscan.io/",
+            "https://polkastats.io"
+         ],
+         "source_code":[
+            "https://github.com/w3f"
+         ]
+      },
+      "logo":"https://s2.coinmarketcap.com/static/img/coins/64x64/6636.png",
+      "id":6636,
+      "name":"Polkadot",
+      "symbol":"DOT",
+      "slug":"polkadot-new",
+      "description":"Polkadot is an open-source project founded by the Web3 Foundation. Polkadot is a sharded protocol that enables blockchain networks to operate together. The DOT token serves three distinct purposes: governance over the network, staking, and bonding.",
+      "notice":"This page refers to _New Dot_ which is 100x smaller than DOT (OLD) On 21 August 2020 at 16:40 UTC (block number 1,248,328), the DOT token underwent a redenomination from its original sale. _New Dot_ are 100x smaller than DOT (OLD). There is no difference between _New Dot_ and DOT (OLD) except for their denomination. ",
+      "date_added":"2020-08-19T00:00:00.000Z",
+      "tags":[
+         "substrate",
+         "polkadot"
+      ],
+      "tag-names":[
+         "Substrate",
+         "Polkadot"
+      ],
+      "tag-groups":[
+         "PROPERTY",
+         "PLATFORM"
+      ],
+      "self_reported_tags":"None",
+      "self_reported_circulating_supply":904869778,
+      "is_hidden":0,
+      "platform":"None",
+      "category":"coin"
+   }
+}

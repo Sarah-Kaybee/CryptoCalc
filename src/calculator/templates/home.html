@@ -2,38 +2,34 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
+<div class="container" style="border: black solid 1px;">
 
     <!-- TITLE HEADER -->
-    <div class="jumbotron">
+    <div class="jumbotron" style="border: black solid 1px; text-align: center;">
         <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img style="border: black solid 1px;"src="{% static '/calculator/logo.jpg' %}" />
+            <div style="border: black solid 1px;" class="row">
+                <div style="border: black solid 1px; display: flex; align-items: center; text-align: center;" class="col-md-6">
+                    <img style="border: black solid 1px; display: flex; text-align: center;" src="{% static '/calculator/logo.jpg' %}" />
+                </div>
+                <div class="col-md-6">
+                    <h1 class="black-centred-text" style="font-size: 450%; border: black solid 1px">CryptoCalc</h1>
+                    <h2 class="black-centred-text">
+                        Calculate Your Returns</h2>
+                    <p class="black-centred-text" style="font-size: 120%;">
+                    Accurately compare crypto farming benefits with CryptoCalc.</p>
+                </div>
             </div>
-            <div class="col-md-6">
-                <h1 class="black-centred-text">
-                    CryptoCalc
-                </h1>
-                <h2 class="black-centred-text">
-                    Calculate Your Returns</h2>
-                <p style="text-align: center;
-                  color: #000000;
-                  font-size: 16px;">
-                Accurately compare crypto farming benefits with CryptoCalc.</p>
-            </div>
-        </div>
       </div>
     </div>
 
     <!-- CALCULATOR -->
-    <div class="container">
+    <div class="jumbotron" style="background-color: #FFFFFF; border: black solid 1px;">
         <!--Currency Search Bar-->
         <div class="container" id="currency-dropdown" style="margin-bottom: 1%;">
             <div class="dropdown nav-item"
                  style="margin: auto;
                         width: 45%;">
-                <h5 style="text-align: center;">Choose currency: </h5>
+                <h4 class="black-centred-text">Choose currency: </h4>
                 <!-- Dropdown coin list -->
                 <!--Source: https://www.youtube.com/watch?v=lg1d0QaQLe0,
                 https://www.webslesson.info/2017/04/multiple-select-option-by-using-bootstrap-select-plugin-in-php-ajax.html-->
@@ -51,12 +47,16 @@
             </div>
         </div>
 
+        <div class="container" style="display: none; text-align: center;">
+            <span>Coin: {{ coin }}</span>
+            <span>Farming Type: {{ farming_type }}</span>
+            <p>**Include info about the chosen coin here. Only once the coin is chosen.**</p>
+        </div>
+
         <div class="container">
-            <!-- ROW -->
             <div class="row center">
                 <!-- STAKING CALCULATOR -->
                 <div style="border: black solid 1px;" class="col md-3 mb-3">
-                    {{ coin }} {{ farming_type }}
                     <input id="staking_amnt" class="form-control" placeholder="Amount staked" type="number">
                 </div>
 
@@ -84,7 +84,7 @@
 
     <hr>
 
-    <div class="container">
+    <div class="jumbotron" style="background-color: white; border: black solid 1px;">
         <!-- Grid layout -->
         <!-- SOURCE: Bootstrap template. https://getbootstrap.com/docs/4.5/examples/album/-->
         <h3 style="text-align: center; padding=100px;">New to crypto? Check these out:</h3>
@@ -96,17 +96,17 @@
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <svg class="bd-placeholder-img card-img-top"
-                            width="100%"
-                            height="225"
-                            xmlns="http://www.w3.org/2000/svg"
-                            preserveAspectRatio="xMidYMid slice"
-                            focusable="false"
-                            role="img"
-                            aria-label="Placeholder: Thumbnail">
+                                width="100%"
+                                height="225"
+                                xmlns="http://www.w3.org/2000/svg"
+                                preserveAspectRatio="xMidYMid slice"
+                                focusable="false"
+                                role="img"
+                                aria-label="Placeholder: Thumbnail">
                             </svg>
                             <div class="card-body">
-                                <p class="card-title" style="text-color: #000000;">
-                                    <h2 style="text-align: center;">Crypto for Beginners</h2>
+                                <p class="card-title">
+                                    <h2 class="black-centred-text">Crypto for Beginners</h2>
                                     What is cryptocurrency and why is it so important? Click here to learn.
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
@@ -122,17 +122,17 @@
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
                             <svg class="bd-placeholder-img card-img-top"
-                            width="100%"
-                            height="225"
-                            xmlns="http://www.w3.org/2000/svg"
-                            preserveAspectRatio="xMidYMid slice"
-                            focusable="false"
-                            role="img"
-                            aria-label="Placeholder: Thumbnail">
+                                width="100%"
+                                height="225"
+                                xmlns="http://www.w3.org/2000/svg"
+                                preserveAspectRatio="xMidYMid slice"
+                                focusable="false"
+                                role="img"
+                                aria-label="Placeholder: Thumbnail">
                             </svg>
                             <div class="card-body">
                                 <p class="card-title">
-                                    <h2 style="text-align: center;">How can I farm crypto?</h2>
+                                    <h2 class="black-centred-text">How can I farm crypto?</h2>
                                     Educate yourself about Crypto farming methods: PoS, PoW and Lending. Start earning ASAP!
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
@@ -158,7 +158,7 @@
                             </svg>
                             <div class="card-body">
                                 <p class="card-title">
-                                    <h2 style="text-align: center;">Crypto News</h2>
+                                    <h2 class="black-centred-text">Crypto News</h2>
                                     Check the news. Check the news. Check the news. Check the news. Check the news.
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
@@ -176,8 +176,22 @@
         </div>
     </div>
 
-    <!-- Grid layout #2 -->
-    <h3>Latest news: </h3>
+    <hr>
+
+    <div class="jumbotron" style="background-color: white; border: black solid 1px;">
+        <!-- Grid layout #2 -->
+        <h3 class="black-centred-text">Crypto news:</h3>
+
+    </div>
+
+    <hr>
+
+    <div class="jumbotron", style="background-color: white; border: black solid 1px;">
+        <!-- Grid layout #3 -->
+        <h3 class="black-centred-text">Macro News:</h3>
+
+    </div>
+
 </div>
 
 <script>

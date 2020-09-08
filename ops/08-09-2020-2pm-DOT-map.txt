@@ -1,0 +1,13 @@
+[
+   {
+      "id":6636,
+      "name":"Polkadot",
+      "symbol":"DOT",
+      "slug":"polkadot-new",
+      "is_active":1,
+      "rank":7,
+      "first_historical_data":"2020-08-20T03:29:22.000Z",
+      "last_historical_data":"2020-09-08T04:09:17.000Z",
+      "platform":"None"
+   }
+]

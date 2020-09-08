@@ -1,0 +1,33 @@
+{
+   "DOT":{
+      "id":6636,
+      "name":"Polkadot",
+      "symbol":"DOT",
+      "slug":"polkadot-new",
+      "num_market_pairs":49,
+      "date_added":"2020-08-19T00:00:00.000Z",
+      "tags":[
+         "substrate",
+         "polkadot"
+      ],
+      "max_supply":"None",
+      "circulating_supply":852647705,
+      "total_supply":987964778,
+      "is_active":1,
+      "platform":"None",
+      "cmc_rank":7,
+      "is_fiat":0,
+      "last_updated":"2020-09-08T04:12:17.000Z",
+      "quote":{
+         "USD":{
+            "price":4.56355454332,
+            "volume_24h":646322388.357642,
+            "percent_change_1h":-0.00282036,
+            "percent_change_24h":0.600953,
+            "percent_change_7d":-29.4013,
+            "market_cap":3891104308.0041213,
+            "last_updated":"2020-09-08T04:12:17.000Z"
+         }
+      }
+   }
+}

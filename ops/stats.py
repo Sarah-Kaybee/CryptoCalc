@@ -72,3 +72,15 @@ print(coin_data["latest_listing"])
 print(coin_data["quotes_latest"])
 print(coin_data["global_metrics_quotes_latest"])
 print(coin_data["tools_price_conversion"])
+
+farming_types = ["pow", "pos"]
+
+
+def get_farming_type(coin_data):
+    latest_listing = coin_data["latest_listing"]
+    for coin in latest_listing:
+        tags = latest_listing["tags"]
+        for tag in tags:
+            if tag.lower() in farming_types:
+                print("FARMING INFORMATION NOT CURRENTLY AVAILABLE FOR " + coin["name"])
+                return None

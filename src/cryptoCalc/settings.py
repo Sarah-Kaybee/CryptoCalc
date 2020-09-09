@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'products',
+    'calculator'
 ]
 
 MIDDLEWARE = [
@@ -59,7 +59,6 @@ TEMPLATES = [
         'DIRS': [
             "templates",
             "calculator/templates",
-            "products/templates",
         ],
         'APP_DIRS': True,
         'OPTIONS': {

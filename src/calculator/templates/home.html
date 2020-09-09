@@ -54,21 +54,21 @@
         </div>
 
         <div class="container">
-            <div class="row center">
-                <!-- STAKING CALCULATOR -->
-                <div style="border: black solid 1px;" class="col md-3 mb-3">
-                    <input id="staking_amnt" class="form-control" placeholder="Amount staked" type="number">
-                </div>
-
-                <!-- MINING CALCULATOR -->
-                <div style="border: black solid 1px; text-align: center;" class="col md-3 mb-3">
-                    <input id="hashrate" class="form-control" placeholder="Hashrate" type="number">
-                </div>
+            <!-- CALCULATOR GOES HERE. DISPLAY DEPENDS ON WHICH COIN THE USER CHOOSES. -->
+            <div name="mining_calc">
+                {% include 'mining_calc.html' %}
             </div>
+
+            <div name="staking_calc">
+                {% include 'staking_calc.html' %}
+            </div>
+
             <div style="border: black solid 1px;" class="row center">
-                <div class="col md-3 mb-3" style="text-align: center;">
-                    <label for="compound">Compound Interest: </label>
-                    <input id="compound" type="checkbox">
+                <div class="col md-3 mb-3" style="text-align: center; border: black solid 1px;">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" id="compound" class="custom-control-input" id="compound">
+                        <label class="custom-control-label" for="compound">Compound interest</label>
+                    </div>
                 </div>
                 <div style="border: black solid 1px;" class="col md-3 mb-3">
                     <input id="time_frame" class="form-control" placeholder="Time staked in days (i.e. 365)" type="number">
@@ -195,7 +195,7 @@
 </div>
 
 <script>
-$(document).ready(function(){
+$(document).ready(function() {
  $('.selectpicker').selectpicker();
 
  $('#framework').change(function(){

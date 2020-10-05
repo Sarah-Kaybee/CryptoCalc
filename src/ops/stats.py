@@ -73,14 +73,30 @@ print(coin_data["quotes_latest"])
 print(coin_data["global_metrics_quotes_latest"])
 print(coin_data["tools_price_conversion"])
 
-farming_types = ["pow", "pos"]
 
-
+# CALL LATEST_LISTING ONCE A MONTH.
 def get_farming_type(coin_data):
+    """
+    RETURN KEY:
+    0: PoW
+    1: PoS
+    2: dPoS
+    3: PoA
+    """
+    farming_keywords = ["pow", "mineable", "pos", "dpos", "poa"]
     latest_listing = coin_data["latest_listing"]
     for coin in latest_listing:
         tags = latest_listing["tags"]
         for tag in tags:
-            if tag.lower() in farming_types:
+            if tag.lower() not in farming_keywords:
                 print("FARMING INFORMATION NOT CURRENTLY AVAILABLE FOR " + coin["name"])
                 return None
+            else:
+                if tag.lower() == "pow" or tag.lower == "mineable":
+                    return 0
+                elif tag.lower() == "pos":
+                    return 1
+                elif tag.lower() == "dpos":
+                    return 2
+                elif tag.lower() == "poa":
+                    return 3

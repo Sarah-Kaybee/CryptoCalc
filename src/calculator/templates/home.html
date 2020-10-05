@@ -39,7 +39,7 @@
                             class="form-control selectpicker"
                             data-live-search="true" multiple>
                         {% for coin in coin_list %}
-                            <option value={{forloop.counter}} data-secondary-text="% 24H">{{ coin }}</option>
+                            <option value={{ coin.symbol }} data-secondary-text="% 24H">{{ coin.symbol }}</option>
                         {% endfor %}
                     </select>
                     <input type="hidden" name="hidden_framework" id="hidden_framework" />

@@ -16,12 +16,18 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-
+import ops.api_requests_cmc as api
 from calculator import views as calc_views
 
 urlpatterns = [
+    # API
+    # path('', api.latest_listings, 'api-data'),
+
+    # VIEWS
     path('', calc_views.home_view, name='home'),
+    path('api-data/', calc_views.get_data, name='api-data'),
     path('home/', calc_views.home_view, name='home'),
+    path('coin_stats/', calc_views.coin_stats_view, name='coin_stats'),
     path('contact/', calc_views.contact_view, name='contact'),
     path('about/', calc_views.about_view, name="about"),
     path('admin/', admin.site.urls),
